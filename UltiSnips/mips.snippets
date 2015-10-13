@@ -1,0 +1,15 @@
+snippet add "$d = $s + $t"
+add $${1:d}, $${2:s}, $${3:t}
+endsnippet
+
+snippet addi "$d = $s + imm"
+addi $${1:d}, $${2:s}, ${3:0}
+endsnippet
+
+snippet beq "if $r1 == $r2 then goto Label"
+beq $${1:r1}, $${2:r2}, ${3:Label}
+endsnippet
+
+snippet str "declare string"
+${2:Label}: .asciiz "${1:content\n}"$0
+endsnippet
